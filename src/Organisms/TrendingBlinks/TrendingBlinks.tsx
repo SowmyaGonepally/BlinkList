@@ -38,7 +38,7 @@ const useStyles=makeStyles({
 
 });
 
-type booktype =  
+type Book =  
 {
    name: string
 }
@@ -72,7 +72,7 @@ style={{width:'658px'}} className={classes.searchField} variant="standard" Input
             </Typography>
           </Grid>
       <Grid container columnSpacing="140px" rowSpacing="40px">
-        {TrendingBlinksData.filter((book: booktype)=>book.name.toLowerCase().includes(searchTerm.toLowerCase())).map((book: { id: React.Key | null | undefined; src: string; name: string; author: string; duration: string; noOfReads: string; })=> ( <Grid key={book.id} item xs={12} sm={6} md={4}>
+        {TrendingBlinksData.filter((book: Book)=>book.name.toLowerCase().includes(searchTerm.toLowerCase())).map((book: { id: React.Key | null | undefined; src: string; name: string; author: string; duration: string; noOfReads: string; })=> ( <Grid key={book.id} item xs={12} sm={6} md={4}>
           <Link to="/bookdetail" style={{textDecoration:'none'}} >
           <ExplorePageCard key={book.id} image={book.src} bookName={book.name} author={book.author} readTime={book.duration}
           reads={book.noOfReads}  
@@ -91,7 +91,7 @@ style={{width:'658px'}} className={classes.searchField} variant="standard" Input
             </Typography>
           </Grid>
       <Grid container columnSpacing="140px" rowSpacing="40px">
-        {JustAddedData.filter((book: booktype)=>book.name.toLowerCase().includes(searchTerm.toLowerCase())).map((book: { id: React.Key | null | undefined; src: string; name: string; author: string; duration: string; noOfReads: string; })=> ( <Grid key={book.id} item xs={12} sm={6} md={4}>
+        {JustAddedData.filter((book: Book)=>book.name.toLowerCase().includes(searchTerm.toLowerCase())).map((book: { id: React.Key | null | undefined; src: string; name: string; author: string; duration: string; noOfReads: string; })=> ( <Grid key={book.id} item xs={12} sm={6} md={4}>
           <ExplorePageCard key={book.id} image={book.src} bookName={book.name} author={book.author} readTime={book.duration}
           reads={book.noOfReads}  
           />
@@ -107,7 +107,7 @@ style={{width:'658px'}} className={classes.searchField} variant="standard" Input
             </Typography>
           </Grid>
       <Grid container columnSpacing="140px" rowSpacing="40px">
-        {FeaturedAudioBlinksData.filter((book: booktype)=>book.name.toLowerCase().includes(searchTerm.toLowerCase())).map((book: { id: React.Key | null | undefined; src: string; name: string; author: string; duration: string; noOfReads: string; })=> ( <Grid key={book.id} item xs={12} sm={6} md={4}>
+        {FeaturedAudioBlinksData.filter((book: Book)=>book.name.toLowerCase().includes(searchTerm.toLowerCase())).map((book: { id: React.Key | null | undefined; src: string; name: string; author: string; duration: string; noOfReads: string; })=> ( <Grid key={book.id} item xs={12} sm={6} md={4}>
           <ExplorePageCard key={book.id} image={book.src} bookName={book.name} author={book.author} readTime={book.duration}
           reads={book.noOfReads}  
           />
