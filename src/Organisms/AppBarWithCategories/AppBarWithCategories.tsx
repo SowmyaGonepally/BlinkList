@@ -2,7 +2,7 @@ import { AppBar, Button, Grid,    IconButton,    Typography } from "@mui/materia
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import BlinkListLogo from "../../Atoms/Blinklistlogo/Blinklistlogo";
-import MySearchIcon from "../../Atoms/Searchicon/Searchicon";
+import MySearchIcon from "../../Atoms/Searchicon/MySearchicon";
 import MyAvatar from "../../Atoms/Avatar/MyAvatar";
 import {  StyledEngineProvider } from "@mui/system";
 import ExploreCategories from "../ExploreCategories/ExploreCategories";

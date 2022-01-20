@@ -30,7 +30,6 @@ test("Book should match with filter eat",()=>{
     render(
         <BrowserRouter>  <MyTabs searchTerm="eat" /> </BrowserRouter>
       );
-      //screen.debug();
       const bookName = screen.getByText(/Eat Better, Feel Better/i);
       expect(bookName).toBeInTheDocument();
 

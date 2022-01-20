@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 import { makeStyles } from '@mui/styles';
 
-import { ExplorePageCard } from "../../Molecules/BookCard/MyCard.stories";
+import { ExplorePageCard } from "../../Molecules/BookCard/BookCard.stories";
 import TrendingBlinksData from "./TrendingBlinksdata";
 import JustAddedData from "./JustAddeddata";
 import FeaturedAudioBlinksData from "./FeaturedAudioBlinksdata";

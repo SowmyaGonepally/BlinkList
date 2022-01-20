@@ -151,8 +151,8 @@ const CurrentCard:React.FunctionComponent<Props>=(props)=>
     {
         if(props.buttonName==='Finished')
         {
-            const book=CurrentlyReading.filter((book: { id: number ; src: string; name: string; author: string; duration: string; noOfReads: string; })=>book.id===id);
-            FinishedReading.push(...book);
+            const cbook=CurrentlyReading.filter((book: { id: number ; src: string; name: string; author: string; duration: string; noOfReads: string; })=>book.id===id);
+            FinishedReading.push(...cbook);
             const index=CurrentlyReading.findIndex((book: { id: number }) =>book.id===id);
             CurrentlyReading.splice(index,1);
             props.incCount();
@@ -160,8 +160,8 @@ const CurrentCard:React.FunctionComponent<Props>=(props)=>
         }
         else
         {
-            const book=FinishedReading.filter((book: { id: number; })=>book.id===props.id);
-            CurrentlyReading.push(...book);
+            const fbook=FinishedReading.filter((book: { id: number; })=>book.id===props.id);
+            CurrentlyReading.push(...fbook);
             const index=FinishedReading.findIndex((book: { id: number; })=>book.id===props.id);
             FinishedReading.splice(index,1);
             props.incCount();
