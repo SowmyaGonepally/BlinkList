@@ -86,7 +86,7 @@ test("on click Entrepreneurship, key ideas must be displayed",()=>{
       
 });
 
-test("Filter check",()=>{
+test("Filter check- false",()=>{
 
     render(
        
@@ -97,7 +97,22 @@ test("Filter check",()=>{
 
     const search=screen.getByRole("textbox");
     fireEvent.change(search,{target:{value:"lon"}});
-    const book=screen.getByText(/Bring your human to work/i);
+    const book=screen.queryByText(/Bring your human to work/i);
     expect(book).not.toBeInTheDocument();
+
+});
+test("Filter check - true",()=>{
+
+    render(
+       
+        <BrowserRouter>
+        <TrendingBlinks />
+        </BrowserRouter> 
+    );
+
+    const search=screen.getByRole("textbox");
+    fireEvent.change(search,{target:{value:"lon"}});
+    const book=screen.queryByText(/The Lonely Century/i);
+    expect(book).toBeInTheDocument();
 
 });
